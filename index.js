@@ -52,11 +52,10 @@ var dob = req.body.dob;
 var sex = req.body.sex;
 
 if(name && dob && sex)
-{
-	
+{	
 sendmail({
 from: 'no-reply@yourdomain.com',
-to: 'sriharan40@gmail.com, himantgupta@gmail.com',
+to: process.env.to_email,
 subject: 'Test sendmail',
 html: JSON.stringify(req.body),
 }, function(err, reply) {
