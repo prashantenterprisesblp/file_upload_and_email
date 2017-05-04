@@ -23,26 +23,6 @@ var app = express();
 
 app.use(bodyParser.json());
 
-var params=function(req){
-  var q=req.url.split('?'),result={};
-  if(q.length>=2){
-      q[1].split('&').forEach((item)=>{
-           try {
-             result[item.split('=')[0]]=item.split('=')[1];
-           } catch (e) {
-             result[item.split('=')[0]]='';
-           }
-      })
-  }
-  return result;
-}
-	
-req.params=params(req);
-
-var user_id = req.params.user_id;
-
-var planname = req.params.planname;
-
 app.post('/', upload.single('image'), function(req, res, next) {
 
 var params=function(req){
@@ -163,6 +143,26 @@ res.writeHead(200, {
 // Simple upload form
 
 app.get('/', function(req, res) {
+
+var params=function(req){
+  var q=req.url.split('?'),result={};
+  if(q.length>=2){
+      q[1].split('&').forEach((item)=>{
+           try {
+             result[item.split('=')[0]]=item.split('=')[1];
+           } catch (e) {
+             result[item.split('=')[0]]='';
+           }
+      })
+  }
+  return result;
+}
+	
+req.params=params(req);
+
+var user_id = req.params.user_id;
+
+var planname = req.params.planname;
 
 var form = '<!DOCTYPE HTML><html><link rel="stylesheet" type="text/css" href="https://s3-us-west-2.amazonaws.com/telcocode/responsiveform.css"><div id="envelope"><body align="left" style="margin:0 auto;"><header><h2>Personal Details</h2></header><hr>' +
 '<form class="form-style-9" action="" method="post" enctype="multipart/form-data"><br /><label>Name </label><input type="text" name="name" class="field-style field-split align-left" value='+planname+' placeholder="Name" /><br /><label>What is the mobile number you are using when you experienced the problem?</label><input type="text" name="mobile" class="field-style field-split align-left" placeholder="Mobile" />'+
