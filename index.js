@@ -80,8 +80,8 @@ if(name && mobile && brand && experience && more_details)
 sendmail({
 from: 'admin@yourdomain.com',
 to: process.env.to_email,
-subject: 'Contact form Submitted',
-html: JSON.stringify(req.body),
+subject: 'SwitchBot Feedback from '+name,
+html: "Content: <br />"+ JSON.stringify(req.body),
 }, function(err, reply) {
 console.log(err && err.stack);
 console.dir(reply);
