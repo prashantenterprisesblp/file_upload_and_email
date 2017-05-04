@@ -61,7 +61,7 @@ sendmail({
 from: 'admin@yourdomain.com',
 to: process.env.to_email,
 subject: 'SwitchBot Feedback from '+name,
-html: "Content: <br />"+ JSON.stringify(req.body),
+html: "Content: <br /> Name: "+req.body.name+" <br />Date and time submitted: "+new Date()+"<br />Mobile Number: "+req.body.mobile+"<br />Cellphone brand and model: "+req.body.brand+"<br />Details: "+req.body.experience+"<br /> Additional Details: "+req.body.more_details+" ",
 }, function(err, reply) {
 console.log(err && err.stack);
 console.dir(reply);
