@@ -166,9 +166,9 @@ var planname = req.params.planname;
 
 var form = '<!DOCTYPE HTML><html><link rel="stylesheet" type="text/css" href="https://s3-us-west-2.amazonaws.com/telcocode/responsiveform.css"><div id="envelope"><body align="left" style="margin:0 auto;"><header><h2>Personal Details</h2></header><hr>' +
 '<form class="form-style-9" action="" method="post" enctype="multipart/form-data"><br /><label>Name </label><input type="text" name="name" class="field-style field-split align-left" value='+planname+' placeholder="Name" /><br /><label style="line-height:50px;">What is the mobile number you are using when you experienced the problem?</label><input type="text" name="mobile" class="field-style field-split align-left" placeholder="Mobile" />'+
-'<label>What is your cellphone brand and model?	</label><input type="text" name="brand" class="field-style field-split align-right" placeholder="Brand" />'+
-'<label>Can you share the details of your experience? </label><input type="text" name="experience" class="field-style field-split align-left" placeholder="Share Experience" />'+
-'<label>Anything more you wish to add? </label><textarea name="more_details" class="field-style field-split align-left" placeholder="More Details"></textarea>'+
+'<label style="line-height:50px;">What is your cellphone brand and model?	</label><input type="text" name="brand" class="field-style field-split align-right" placeholder="Brand" />'+
+'<label style="line-height:50px;">Can you share the details of your experience? </label><input type="text" name="experience" class="field-style field-split align-left" placeholder="Share Experience" />'+
+'<label style="line-height:50px;">Anything more you wish to add? </label><textarea name="more_details" class="field-style field-split align-left" placeholder="More Details"></textarea>'+
 '<br /><br /><input type="submit" value="Submit" />'+
 '</form></div>'+
 '</body></html>';
