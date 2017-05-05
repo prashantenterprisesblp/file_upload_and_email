@@ -105,7 +105,7 @@ res.writeHead(200, {
 });
   
 var form1 = '<!DOCTYPE HTML><html><link rel="stylesheet" type="text/css" href="https://s3-ap-southeast-1.amazonaws.com/formstyle/responsiveform.css">'+
-'<div id="envelope"><body align="left" onload=window.location="http://m.me/digitaldemofortelcos"><header><h2>Your feedback</h2></header><hr>' +
+'<div id="envelope"><body align="left" onload=window.location="http://m.me/globeswitchapp"><header><h2>Your feedback</h2></header><hr>' +
 '<p>Your concern was logged. Thanks</p>'+
 '</div>'+
 '</body></html>';
@@ -122,10 +122,10 @@ res.end();
 else
 {
 var form = '<!DOCTYPE HTML><html><link rel="stylesheet" type="text/css" href="https://s3-ap-southeast-1.amazonaws.com/formstyle/responsiveform.css"><div id="envelope"><body align="left" style="margin:0 auto;"><header><h2>Your feedback</h2></header><hr>' +
-'<form class="form-style-9" action="" method="post" enctype="multipart/form-data"><br /><label>Name </label><input type="text" name="name" class="field-style field-split align-left" value='+planname+' placeholder="Name" /><br /><label>What is the mobile number you are using when you experienced the problem?</label><input type="text" name="mobile" class="field-style field-split align-left" placeholder="Mobile" />'+
-'<label>What is your cellphone brand and model?	</label><input type="text" name="brand" class="field-style field-split align-right" placeholder="Brand" />'+
-'<label>Can you share the details of your experience? </label><input type="text" name="experience" class="field-style field-split align-left" placeholder="Share Experience" />'+
-'<label>Anything more you wish to add? </label><textarea name="more_details" class="field-style field-split align-left" placeholder="More Details"></textarea>'+
+'<form class="form-style-9" action="" method="post" enctype="multipart/form-data"><br /><label>Name </label><input type="text" name="name" class="field-style field-split align-left" value='+planname+' placeholder="Name" /><br /><label style="line-height:50px;">What is the mobile number you are using when you experienced the problem?</label><input type="text" name="mobile" class="field-style field-split align-left" placeholder="Mobile" />'+
+'<label style="line-height:50px;">What is your cellphone brand and model?	</label><input type="text" name="brand" class="field-style field-split align-right" placeholder="Brand" />'+
+'<label style="line-height:50px;">Can you share the details of your experience? </label><input type="text" name="experience" class="field-style field-split align-left" placeholder="Share Experience" />'+
+'<label style="line-height:50px;">Anything more you wish to add? </label><textarea name="more_details" class="field-style field-split align-left" placeholder="More Details"></textarea>'+
 '<br /><br /><input type="submit" value="Submit" />'+
 '</form></div>'+
 '</body></html>';
@@ -164,7 +164,7 @@ var user_id = req.params.user_id;
 
 var planname = req.params.planname;
 
-var form = '<!DOCTYPE HTML><html><link rel="stylesheet" type="text/css" href="https://s3-us-west-2.amazonaws.com/telcocode/responsiveform.css"><div id="envelope"><body align="left" style="margin:0 auto;"><header><h2>Personal Details</h2></header><hr>' +
+var form = '<!DOCTYPE HTML><html><link rel="stylesheet" type="text/css" href="https://s3-ap-southeast-1.amazonaws.com/formstyle/responsiveform.css"><div id="envelope"><body align="left" style="margin:0 auto;"><header><h2>Your Feedback</h2></header><hr>' +
 '<form class="form-style-9" action="" method="post" enctype="multipart/form-data"><br /><label>Name </label><input type="text" name="name" class="field-style field-split align-left" value='+planname+' placeholder="Name" /><br /><label style="line-height:50px;">What is the mobile number you are using when you experienced the problem?</label><input type="text" name="mobile" class="field-style field-split align-left" placeholder="Mobile" />'+
 '<label style="line-height:50px;">What is your cellphone brand and model?	</label><input type="text" name="brand" class="field-style field-split align-right" placeholder="Brand" />'+
 '<label style="line-height:50px;">Can you share the details of your experience? </label><input type="text" name="experience" class="field-style field-split align-left" placeholder="Share Experience" />'+
